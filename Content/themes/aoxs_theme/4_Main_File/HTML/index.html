@@ -1,0 +1,176 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="ThemeFuse" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>AOXS - Academy of X-Sports </title>
+<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+
+<link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/preloadCssImages.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.tools.min.js"></script>
+<script type="text/javascript" src="js/general.js"></script>
+
+<link href="css/supersized.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="js/slideshow/supersized.3.2.6.min.js"></script>
+<script type="text/javascript" src="js/slideshow/supersized.photoartist.js"></script>
+<script type="text/javascript">			
+jQuery(document).ready(function($) {
+
+    $('#header_pane').toggle(function(){
+            $(this).addClass('closed').animate({top: 0}, 300);
+            $('.header').slideUp(300);
+            $('#slide_info_container').animate({top: 32}, 300);
+        }, function () {
+            $(this).removeClass('closed').animate({top: 76}, 300);
+            $('.header').slideDown(300);
+            $('#slide_info_container').animate({top: 107}, 300);
+    });
+    
+    $('#slide_info_toggle').toggle(function(){
+            $(this).addClass('closed');
+            $('#slidecaption, #slidedescription').hide();
+        }, function () {
+            $(this).removeClass('closed');
+            $('#slidecaption, #slidedescription').show();
+    });
+
+    $.supersized({
+        autoplay                :   1,
+
+        // Functionality
+        slide_interval          :   4500,		// Length between transitions
+        transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+        transition_speed	:   600,		// Speed of transition
+
+        // Components							
+        slide_links		:   'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+        slides 			:   [			// Slideshow Images
+                                    {image : 'images/supersized/slides/slide_01.jpg', title : 'Why do we use it?', desc: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English.', thumb : 'images/supersized/thumb/slide_01_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_02.jpg', title : 'What is Lorem Ipsum?', desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.', thumb : 'images/supersized/thumb/slide_02_thb.jpg'}, 
+                                    {image : 'images/supersized/slides/slide_03.jpg', thumb : 'images/supersized/thumb/slide_03_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_04.jpg', thumb : 'images/supersized/thumb/slide_04_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_05.jpg', title : 'Where can I get some?', desc: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English.',thumb : 'images/supersized/thumb/slide_05_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_06.jpg', thumb : 'images/supersized/thumb/slide_06_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_07.jpg', thumb : 'images/supersized/thumb/slide_07_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_08.jpg', title : 'Who created it?', desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.', thumb : 'images/supersized/thumb/slide_08_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_09.jpg', thumb : 'images/supersized/thumb/slide_09_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_10.jpg', thumb : 'images/supersized/thumb/slide_10_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_11.jpg', title : 'Where does it come from?', desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',thumb : 'images/supersized/thumb/slide_11_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_12.jpg', thumb : 'images/supersized/thumb/slide_12_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_13.jpg', thumb : 'images/supersized/thumb/slide_13_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_14.jpg', thumb : 'images/supersized/thumb/slide_14_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_15.jpg', thumb : 'images/supersized/thumb/slide_15_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_16.jpg', title : 'Where can I get some?', desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.',thumb : 'images/supersized/thumb/slide_16_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_17.jpg', thumb : 'images/supersized/thumb/slide_17_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_18.jpg', thumb : 'images/supersized/thumb/slide_18_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_19.jpg', thumb : 'images/supersized/thumb/slide_19_thb.jpg'},
+                                    {image : 'images/supersized/slides/slide_20.jpg', thumb : 'images/supersized/thumb/slide_20_thb.jpg'}
+                                    ]				
+    });
+});
+</script>
+		
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" /><![endif]-->
+
+</head>
+
+<body>
+<div class="header">	
+
+    <div class="logo">
+    <a href="index.html"> <img src="images/logo.png" alt="" > </a>
+    <h1>AOXS - The Academy of X-Sports</h1>
+    </div>
+    
+    <div class="header_play_box">
+		<a id="play-button"><img id="pauseplay" src="images/supersized/pause.png" alt=""></a>			
+		
+        <div class="progress_bar_bg">
+            <div id="progress-back" class="load-item">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+	</div>
+    
+    <div class="topmenu">
+		<ul class="dropdown">
+                    <li><a href="index.html"><span>Work</span></a>
+            	<ul>
+                    <li><a href="#"><span>LANDSCAPE & NATURE</span></a></li>
+                    <li><a href="#"><span>COMMERCIAL</span></a></li>
+                    <li><a href="#"><span>PORTRAITS & PEOPLE</span></a></li>
+                    <li><a href="#"><span>WEDDING PHOTOGRAHY</span></a></li>
+                    <li><a href="#"><span>PERSONAL PROJECTS</span></a></li>
+                    <li><a href="#"><span>VIDEO SHOOTING</span></a></li>
+                </ul>
+            </li>
+            <li><a href="blog.html"><span>Blog</span></a></li>
+          	<li><a href="#"><span>Pages</span></a>
+                    	<ul>
+                        	<li><a href="page-about.html"><span>About Me</span></a></li>
+                            
+                            <li><a href="page-sidebar-r.html"><span>Sidebar Right</span></a></li>
+                          	<li><a href="#"><span>Shortcodes</span></a>
+                                <ul>
+                                    <li><a href="shortcodes-text.html"><span>Text &amp; Images</span></a></li>
+                                    <li><a href="shortcodes-buttons.html"><span>Buttons &amp; Lists</span></a></li> 
+                                    <li><a href="shortcodes-charts.html"><span>Charts</span></a></li>  
+                                    <li><a href="shortcodes-columns.html"><span>Columns</span></a>
+                                        <ul>
+                                            <li><a href="shortcodes-full-cols2.html">Wide Content</a></li>
+                                            <li><a href="shortcodes-full-cols3.html">Two Sidebars</a></li>
+                                        </ul>
+                                    </li>  
+                                    <li><a href="shortcodes-lightbox.html"><span>Lightbox</span></a></li>
+									<li><a href="shortcodes-maps.html"><span>Maps</span></a></li>
+                                    <li><a href="shortcodes-media.html"><span>Media</span></a></li>
+                                    <li><a href="shortcodes-tables.html"><span>Tables</span></a></li>
+                                    <li><a href="shortcodes-tabs.html"><span>Tabs and Toggles</span></a></li>
+                                    <li><a href="shortcodes-typography.html"><span>Typography</span></a></li>
+                                    <li><a href="shortcodes-widgets.html"><span>Widgets</span></a></li>
+                                </ul>
+                          </li>
+                            <li><a href="page-pricing.html"><span>Pricing Page</span></a></li>
+                        </ul>
+                    </li>
+			<li><a href="contact.html"><span>Contact</span></a></li>
+		</ul>
+    <div class="clear"></div>
+	</div>
+    
+    <div class="header_social">
+    	<a href="#"><img src="images/icons/social_facebook_small.png" width="23" height="23" alt=""></a>
+        <a href="#"><img src="images/icons/social_twitter_small.png" width="23" height="23" alt=""></a>
+        <a href="#"><img src="images/icons/social_linkin_small.png" width="23" height="23" alt=""></a>
+    </div>
+        
+</div>
+<a id="header_pane"></a>
+<!--/ header -->
+
+<div id="slide_info_container" class="post_item">
+        <!--Slide captions displayed here-->
+        <div id="slidecaption"><h3></h3></div>
+        <div class="clear"></div>
+        <!--Slide description displayed here-->
+        <div id="slidedescription" class="entry"></div>
+        <div id="slide_info_toggle"></div>
+</div>
+
+                        
+	<!--Supersized Navigation-->
+	<a id="prevslide" class="load-item"></a>
+	<a id="nextslide" class="load-item"></a>
+	
+	<div id="thumb-tray" class="load-item">
+	<a id="tray-button"><img alt="" id="tray-arrow" src="images/supersized/button-tray-up.png"/></a>
+	</div>
+
+
+</body>
+</html>

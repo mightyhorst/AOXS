@@ -1,0 +1,485 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="ThemeFuse" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>Photo Artist - Shortcodes: Widgets</title>
+<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+
+<link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/preloadCssImages.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.tools.min.js"></script>
+<script type="text/javascript" src="js/general.js"></script>
+
+<link href="css/supersized.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="js/slideshow/supersized.3.2.6.min.js"></script>
+<script type="text/javascript" src="js/slideshow/supersized.photoartist.js"></script>
+<script type="text/javascript">
+          		jQuery(document).ready(function($) {
+
+
+                      $('#header_pane').toggle(function(){
+                              $(this).addClass('closed').animate({top: 0}, 300);
+                              $('.header').slideUp(300);
+                              $('#slide_info_container').animate({top: 32}, 300);
+                          }, function () {
+                              $(this).removeClass('closed').animate({top: 76}, 300);
+                              $('.header').slideDown(300);
+                              $('#slide_info_container').animate({top: 107}, 300);
+                      });
+
+                      $('#slide_info_toggle').toggle(function(){
+                              $(this).addClass('closed');
+                              $('#slidecaption, #slidedescription').hide();
+                          }, function () {
+                              $(this).removeClass('closed');
+                              $('#slidecaption, #slidedescription').show();
+                      });
+
+                      $.supersized({
+				
+				autoplay: 0,
+				start_slide: 0,
+			
+				// Functionality
+				slide_interval          :   4500,		// Length between transitions
+				transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+				transition_speed		:	600,		// Speed of transition
+															   
+				// Components							
+				slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+				slides 					:  	[			// Slideshow Images
+												{image : 'images/supersized/slides/slide_01.jpg'},
+												{image : 'images/supersized/slides/slide_02.jpg'}, 
+												{image : 'images/supersized/slides/slide_03.jpg'},
+												{image : 'images/supersized/slides/slide_04.jpg'},
+												{image : 'images/supersized/slides/slide_05.jpg'},
+												{image : 'images/supersized/slides/slide_06.jpg'},
+												{image : 'images/supersized/slides/slide_07.jpg'},
+												{image : 'images/supersized/slides/slide_08.jpg'},
+												{image : 'images/supersized/slides/slide_09.jpg'},
+												{image : 'images/supersized/slides/slide_10.jpg'},
+												{image : 'images/supersized/slides/slide_11.jpg'},
+												{image : 'images/supersized/slides/slide_12.jpg'},
+												{image : 'images/supersized/slides/slide_13.jpg'},
+												{image : 'images/supersized/slides/slide_14.jpg'},
+												{image : 'images/supersized/slides/slide_15.jpg'},
+												{image : 'images/supersized/slides/slide_16.jpg'},
+												{image : 'images/supersized/slides/slide_17.jpg'},
+												{image : 'images/supersized/slides/slide_18.jpg'},
+												{image : 'images/supersized/slides/slide_19.jpg'},
+												{image : 'images/supersized/slides/slide_20.jpg'}
+											]				
+			});
+		});
+</script>
+
+
+<script type="text/javascript" language="JavaScript" src="js/slides.min.jquery.js"></script>
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" />
+<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
+<script type="text/javascript" language="javascript" src="js/shCore.js"></script>
+<script type="text/javascript" language="javascript" src="js/shBrushPlain.js"></script>
+<link href="css/shCore.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/shThemeDefault.css" media="screen" rel="stylesheet" type="text/css" />
+
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" /><![endif]-->
+</head>
+
+<body>
+<div class="header">
+
+	<div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt=""></a>
+    <strong>Photo Artist - Wordpress theme mady by ThemeFuse</strong>
+    </div>
+    
+	<div class="header_play_box">
+		<a id="play-button"><img id="pauseplay" src="images/supersized/pause.png" alt=""></a>			
+		
+        <div class="progress_bar_bg">
+            <div id="progress-back" class="load-item">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+	</div>
+    
+    <div class="topmenu">
+		<ul class="dropdown">
+			<li class="menu-item-home"><a href="index.html"><span>Work</span></a>
+			<ul>
+					<li><a href="#"><span>LANDSCAPE & NATURE</span></a></li>
+                    <li><a href="#"><span>COMMERCIAL</span></a></li>
+                    <li><a href="#"><span>PORTRAITS & PEOPLE</span></a></li>
+                    <li><a href="#"><span>WEDDING PHOTOGRAHY</span></a></li>
+                    <li><a href="#"><span>PERSONAL PROJECTS</span></a></li>
+                    <li><a href="#"><span>VIDEO SHOOTING</span></a></li>
+                </ul>
+			</li>
+            <li><a href="blog.html"><span>Blog</span></a></li>
+          	<li class="current-menu-ancestor"><a href="#"><span>Pages</span></a>
+                    	<ul>
+                        	<li><a href="page-about.html"><span>About Me</span></a></li>
+                            
+                            <li><a href="page-sidebar-r.html"><span>Sidebar Right</span></a></li>
+                          	<li class="current-menu-ancestor"><a href="#"><span>Shortcodes</span></a>
+                                <ul>
+                                    <li><a href="shortcodes-text.html"><span>Text &amp; Images</span></a></li>
+                                    <li><a href="shortcodes-buttons.html"><span>Buttons &amp; Lists</span></a></li> 
+                                    <li><a href="shortcodes-charts.html"><span>Charts</span></a></li>  
+                                    <li><a href="shortcodes-columns.html"><span>Columns</span></a>
+                                        <ul>
+                                            <li><a href="shortcodes-full-cols2.html">Wide Content</a></li>
+                                            <li><a href="shortcodes-full-cols3.html">Two Sidebars</a></li>
+                                        </ul>
+                                    </li>  
+                                    <li><a href="shortcodes-lightbox.html"><span>Lightbox</span></a></li>
+									<li><a href="shortcodes-maps.html"><span>Maps</span></a></li>
+                                    <li><a href="shortcodes-media.html"><span>Media</span></a></li>
+                                    <li><a href="shortcodes-tables.html"><span>Tables</span></a></li>
+                                    <li><a href="shortcodes-tabs.html"><span>Tabs and Toggles</span></a></li>
+                                    <li><a href="shortcodes-typography.html"><span>Typography</span></a></li>
+                                    <li class="current-menu-item"><a href="shortcodes-widgets.html"><span>Widgets</span></a></li>
+                                </ul>
+                          </li>
+                            <li><a href="page-pricing.html"><span>Pricing Page</span></a></li>
+                        </ul>
+                    </li>
+			<li><a href="contact.html"><span>Contact</span></a></li>
+		</ul>
+    <div class="clear"></div>
+	</div>
+    
+    <div class="header_social">
+    	<a href="#"><img src="images/icons/social_facebook_small.png" width="23" height="23" alt=""></a>
+        <a href="#"><img src="images/icons/social_twitter_small.png" width="23" height="23" alt=""></a>
+        <a href="#"><img src="images/icons/social_linkin_small.png" width="23" height="23" alt=""></a>
+    </div>
+        
+</div>
+<!--/ header -->
+       
+<!-- middle -->
+<div class="middle cols2_fix">
+	
+   	<!-- center part -->
+    <div class="content_wrapper">
+        <!-- content -->
+        <div class="content">               
+            
+            <div class="post-item post-detail">    
+            
+            		<script type="text/javascript">
+					SyntaxHighlighter.defaults['gutter'] = false;
+					SyntaxHighlighter.defaults['toolbar'] = true;								
+					SyntaxHighlighter.all();
+					</script>            	
+                    
+					<div class="post-title">
+                        <h1>Widgets</h1>
+                    </div>                            
+                    
+					<div class="entry">   
+                    
+                    <h2>Testimonials</h2>	
+                    					
+						<div id="testimonials" class="slideshow slideQuotes">
+                            <div class="slides_container">
+                                <div class="slide">
+                                    <div class="quote-text">Over the last eighteen months our sales have increased three fold since the launch of our new web site. We have to say it has made us delighted we chose Medica.</div>
+                                    <div class="quote-author"><span>MIKE HAMMOND</span>, VP Osiris Media</div>                    
+                                </div>
+                                <div class="slide">
+                                    <div class="quote-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                                    <div class="quote-author"><span>James Backer</span>, VP Osiris Media</div>                                    
+                                </div>
+                                <div class="slide">
+                                    <div class="quote-text">Over the last eighteen months our sales have increased three fold since the launch of our new web site. We have to say it has made us delighted we chose Medica.</div>
+                                    <div class="quote-author"><span>Mr. Smith</span>, SportNews UK</div>
+                                </div>
+                                <div class="slide">
+                                    <div class="quote-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut enim ad minim veniam, quis nostrud exercitation .</div>
+                                    <div class="quote-author"><span>MIKE HAMMOND</span>, UK Center CEO</div>
+                                    <p></p>
+                                </div>
+                            </div>
+       		  				<a href="#" class="prev">Prev</a>
+                            <a href="#" class="link-more">VIEW MORE TESTIMONIALS</a>                
+			 				<a href="#" class="next">Next</a>
+                            <div class="clear"></div>
+						</div>
+                        <script language="javascript" type="text/javascript" charset="utf-8">
+							jQuery(document).ready(function($) {
+								$('#testimonials').slides({
+									hoverPause: true,
+									autoHeight: true,
+									pagination: false,
+									generatePagination: false,
+									effect: 'fade',
+									fadeSpeed: 150});
+							});		
+						</script>                        
+                                                
+                        <div class="twitter">
+                    	<h2>Twitter widget</h2>   
+                        <ul>
+                          <li>On Improving Your Productivity: Quick Tips for Photoshop <a href="http://cot.ag/oID">http://cot.ag/oID</a></li>
+                          <li>15 Stunning Illustrations by Niklas Lundberg <a href="http://bit.ly/pFixAD">http://bit.ly/pFixAD</a></li>
+                          <li>How to Fix: Extra contraction marks error in new WordPress posts.</li>
+                          <li>30 Creative Resume Designs Able to Land a New Job <a href="http://cot.ag/qYTGGQ">http://cot.ag/qYTGGQ</a> You never know when you might need this ;)</li>
+                        </ul>
+					</div>                        
+                        
+				
+                    <div class="flickr">
+                    	<h2>Flickr photostream</h2>
+                        <div class="flickr_badge_image" id="flickr_badge_image1"><a href="http://www.flickr.com/photos/themefuse/4745967918/"><img src="http://farm5.static.flickr.com/4122/4745967918_6780fd65ff_s.jpg" alt="A photo on Flickr" title="Bon Apetit HTML/WP template - Homepage" height="100" width="100" /></a></div>
+                        <div class="flickr_badge_image" id="flickr_badge_image2"><a href="http://www.flickr.com/photos/themefuse/4745967666/"><img src="http://farm5.static.flickr.com/4119/4745967666_b996719848_s.jpg" alt="A photo on Flickr" title="TechOffers HTML Newsletter" height="100" width="100" /></a></div>
+                       
+                        <div class="flickr_badge_image" id="flickr_badge_image4"><a href="http://www.flickr.com/photos/themefuse/4745329719/"><img src="http://farm5.staticflickr.com/4074/4745329719_624b0af07a_s.jpg" alt="A photo on Flickr" title="TechOffers HTML Newsletter" height="100" width="100" /></a></div>
+                        <div class="flickr_badge_image" id="flickr_badge_image5"><a href="http://www.flickr.com/photos/themefuse/4745969376/"><img src="http://farm5.staticflickr.com/4093/4745330557_3a0782a879_s.jpg" alt="A photo on Flickr" title="Art Gallery HTML/WP template - Homepage" height="100" width="100" /></a></div>                        
+                        <div class="flickr_badge_image" id="flickr_badge_image6"><a href="http://www.flickr.com/photos/themefuse/4745330159/"><img src="http://farm5.staticflickr.com/4075/4745330159_b0e28f2221_s.jpg" alt="A photo on Flickr" title="Bon Apetit HTML/WP template - Homepage" height="100" width="100" /></a></div>
+                        
+                        <span style="position: absolute; left: -999em; top: -999em; visibility: hidden;" class="flickr_badge_beacon"><img src="http://geo.yahoo.com/p?s=792600102&amp;t=a268516684fee260dc5cde12b3bc2bba&amp;r=http%3A%2F%2Fthemefuse.com%2Fdemo%2Fwp%2Fqlassik%2F%3Fpage_id%3D425&amp;fl_ev=0&amp;lang=en&amp;intl=us" alt="" height="0" width="0" /></span>    
+                        <div class="clear"></div>  
+                    </div>
+                    
+          
+                    
+                    <h2>Recent / Most Commented Widget</h2>
+                    
+                    <!-- tf entry tabs -->
+                	<div class="tf_sidebar_tabs tabs_framed">
+                
+                    <ul class="tabs">
+                        <li><a href="#tf_tabs_1">Recent Posts</a></li>
+                        <li><a href="#tf_tabs_2">Most Commented</a></li>
+                    </ul>
+                    
+                    <div id="tf_tabs_1" class="tabcontent">
+                        <ul class="post_list recent_posts">
+                            <li><a href="blog-details.html">Pharetra sem vitae blandit. Alim sed massa vitae risus </a> <div class="date">Feb 17, 2011</div> </li>
+                            <li><a href="blog-details.html"><img src="images/temp/thumb_7.jpg" alt="" width="54" height="54" border="0" class="thumbnail" /></a> <a href="blog-details.html">Morbi tincidunt lorem dolor sit amet eurasio mecitur.</a> <div class="date">Feb 16, 2011</div> </li>
+                            <li><a href="blog-details.html"><img src="images/temp/thumb_3.jpg" alt="" width="54" height="54" border="0" class="thumbnail" /></a> <a href="blog-details.html">Aliquam sed massa vitae risus sodales molestie vitae </a> <div class="date">Feb 15, 2011</div> </li>
+                            <li><a href="blog-details.html">Tincidunt lorem dolor sit amet </a> <div class="date">Jan 28, 2010</div> </li>
+                            <li><a href="blog-details.html"><img src="images/temp/thumb_5.jpg" alt="" width="54" height="54" border="0" class="thumbnail" /></a> <a href="blog-details.html">Pharetra sem vitae blandit. Alim sed massa vitae risus </a> <div class="date">Jan 10, 2011</div> </li>
+                           
+                        </ul>
+                    </div>
+                    
+                    <div id="tf_tabs_2" class="tabcontent">
+                        <ul class="post_list popular_posts">
+                            <li><a href="blog-details.html"><img src="images/temp/thumb_2.jpg" alt="" width="54" height="54" border="0" class="thumbnail" /></a> <a href="blog-details.html">Morbi tincidunt lorem dolor sit amet eurasio mecitur.</a> <div class="date">Jan 10, 2011</div> </li>
+                            <li><a href="blog-details.html">The concept was created before you designed it our theme is a take on</a> <div class="date">Jan 10, 2011</div> </li>
+                            <li><a href="blog-details.html">Pharetra sem vitae blandit. Alim sed massa vitae risus </a> <div class="date">Feb 17, 2011</div> </li>
+                            <li><a href="blog-details.html"><img src="images/temp/thumb_7.jpg" alt="" width="54" height="54" border="0" class="thumbnail" /></a> <a href="blog-details.html">Morbi tincidunt lorem dolor sit amet eurasio mecitur.</a> <div class="date">Feb 16, 2011</div> </li>
+                            <li><a href="blog-details.html"><img src="images/temp/thumb_6.jpg" alt="" width="54" height="54" border="0" class="thumbnail" /></a> <a href="blog-details.html">Aliquam sed massa vitae risus sodales molestie vitae </a> <div class="date">Feb 15, 2011</div> </li>
+
+                        </ul>
+                    </div>
+                    
+                </div>
+        		<!--/ tf entry tabs -->
+                                
+
+                
+                <div class="row">
+                	<div class="col col_1_2">
+                    <div class="inner">
+                    	<h3>Recent Posts</h3>
+                        
+                        <div class="widget_recent_posts">
+                            <ul>
+                              <li><a href="blog-details.html" class="post-title">How to install WordPress manually</a> 
+                                <div class="post-meta">by <a href="#" class="author">Marcus Johans</a> <span class="separator">|</span> <a href="#" class="link-comments">22 comments</a></div>
+                                <div class="extras">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam. </div>
+                                <a href="blog-details.html" class="link-arrow">Read more</a>
+                                </li>
+                                
+                                <li><a href="blog-details.html" class="post-title">WPTurbo, a new WordPress auto</a> 
+                                <div class="post-meta">by <a href="#" class="author">Marcus Johans</a> <span class="separator">|</span> <a href="#" class="link-comments">22 comments</a></div>
+                                <div class="extras"><a href="blog-details.html"><img src="images/temp/thumb_3.jpg" alt="" width="75" height="75" border="0" class="thumbnail" /></a> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam. </div>
+                                <a href="blog-details.html" class="link-arrow">Read more</a>
+                                </li>
+                            </ul>
+                        </div> 
+                        
+					</div>   						
+                    </div> 
+                    
+                    <div class="col col_1_2">
+                    <div class="inner">
+                    	<h3>Popular Posts</h3>
+                    	<div class="widget_popular_posts">
+                            <ul>
+                                <li><a href="blog-details.html" class="post-title">WPTurbo, a new WordPress auto</a> 
+                                <div class="post-meta">by <a href="#" class="author">Marcus Johans</a> <span class="separator">|</span> <a href="#" class="link-comments">22 comments</a></div>
+                                <div class="extras">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam. </div>
+                                <a href="blog-details.html" class="link-arrow">Read more</a>
+                                </li>
+                                
+                                <li><a href="blog-details.html" class="post-title">How to install WordPress manually</a> 
+                                <div class="post-meta">by <a href="#" class="author">Marcus Johans</a> <span class="separator">|</span> <a href="#" class="link-comments">22 comments</a></div>
+                                <div class="extras"><a href="blog-details.html"><img src="images/temp/thumb_5.jpg" alt="" width="75" height="75" border="0" class="thumbnail" /></a> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.  </div>
+                                 <a href="blog-details.html" class="link-arrow">Read more</a>
+                                </li>
+                            </ul>
+						</div>
+                        
+   					</div>
+                    </div>  
+                    
+                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <h2>Other Shortcodes</h2>
+                    
+                    <div class="row">
+                    <div class="col col_1_2">
+                    
+                        <!-- newsletter widget -->
+                         <div class="widget-container newsletterBox">
+                            <div class="inner">
+                                <h3>Newsletter:</h3>
+                                <form method="get" id="subscribe" action="#">
+                                    <input type="text" value="ENTER your email address" onFocus="if (this.value == 'ENTER your email address') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'ENTER your email address';}" name="email" class="inputField" />
+                                    <input type="submit" value="Send" class="btn-arrow" />
+                                    <div class="newsletter_text"><a href="#" class="link-news-rss">You can also subscribe to <span>our RSS</span></a></div>
+                                </form>     
+                            </div>
+                        </div>
+                        <!--/ newsletter widget -->
+						
+                        <div class="divider_space_thin"></div>
+                                                
+						<!-- search widget -->
+                      	<div class="widget-container widget_search">
+                        <h3>Search widget:</h3>
+                            <form method="get" id="searchform" action="">
+                                <div>
+                                  <label class="screen-reader-text" for="s">Search for:</label>
+                                    <input class="input_search" name="s" id="s2" value="enter keywords" onFocus="if (this.value == 'enter keywords') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'enter keywords';}" type="text" />
+                                    <input id="searchsubmit" class="btn-submit" value="Submit" type="submit" />
+                                </div>
+                            </form>
+                        </div> 
+                        <!--/ search widget -->
+                    
+                    </div>
+                    
+                    
+                    <div class="col col_1_2">
+                        
+                    <!-- login widget -->
+                    <div class="widget-container widget_login">
+                    	<h3>Login  Form</h3>
+                        
+                      <form action="#" method="post" id="loginform" class="loginform">
+                        
+                        <p><label>Username</label><br /><input name="log" id="user_login" class="input" value="" size="20" tabindex="10" type="text" /></p>
+                        
+						<p><label>Password</label><br /><input name="pwd" id="user_pass" class="input" value="" size="20" tabindex="20" type="password" /></p>
+                        
+                        <p class="forgetmenot"><input name="rememberme" type="checkbox" id="rememberme" value="forever" tabindex="90" /><label for="rememberme">Remember Me</label></p>
+                        
+                        <p class="forget_password"><a href="#">Forgot Password?</a></p>   
+                        
+                        <p class="submit">
+                            <input type="submit" name="wp-submit" id="wp-submit" class="btn-submit" value="LOGIN TO YOUR ACCOUNT" tabindex="100" />
+                            <input type="hidden" name="redirect_to" value="" />
+                            <input type="hidden" name="testcookie" value="1" />
+                        </p>                        
+                        
+                      </form>
+                    </div>
+                    <!--/ login widget --> 
+      
+                        
+					</div>
+                    
+                    </div>
+                                        
+                    <div class="divider_dots_full"></div>                  
+                    
+                    
+				<!-- author description -->
+                <div class="author-box">
+                	<h3>Author Description</h3>
+                    <div class="author-description">
+                		<div class="author-image"><img src="images/temp/author_image.jpg" width="100" height="100" alt="" /></div>
+                      	<div class="author-text">
+                          <h4>Michael j. FlatBerry</h4>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque fdaer  ipsa quae ab
+tore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo </p>
+                            <div class="author-contact"><label>CONTACT THE AUTHOR:</label>
+                            <a href="#"><img src="images/icons/social_facebook_mid.png" alt="" width="25" height="25" border="0" /></a>
+                            <a href="#"><img src="images/icons/social_twitter_mid.png" alt="" width="25" height="25" border="0" /></a>
+                            <a href="#"><img src="images/icons/social_linkin_mid.png" alt="" width="25" height="25" border="0" /></a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                	</div>        
+                </div>
+                <!--/ author description -->
+                       
+					<div class="clear"></div>     
+                  	</div>       
+			</div>
+                        
+      	</div>
+        <!--/ content -->
+        	
+        <div class="clear"></div>
+    </div>
+    <!--/ center part -->
+    
+    <!-- sidebar 1 -->
+    <div class="sidebar sidebar_1">  
+    
+    		<div class="widget-container widget_categories">
+				<h3 class="widget-title">Pages</h3>  
+                    <ul>
+                        <li><a href="page-about.html">About Me</a></li>
+                        <li><a href="page-sidebar-r.html">Sidebar Right</a></li>
+                        <li><a href="page-pricing.html">Pricing Page</a></li>
+                    </ul>
+			</div>  
+    	
+			
+            <div class="widget-container widget_categories">
+				<h3 class="widget-title">Shortcodes</h3>  
+                    <ul>
+                        <li><a href="shortcodes-text.html">Text &amp; Images</a></li>
+                        <li><a href="shortcodes-buttons.html">Buttons &amp; Lists</a></li> 
+                        <li><a href="shortcodes-charts.html">Charts</a></li>  
+                        <li><a href="shortcodes-columns.html">Columns</a>
+                        	<ul>
+								<li><a href="shortcodes-full-cols2.html">Wide Content</a></li>
+								<li><a href="shortcodes-full-cols3.html">Two Sidebars</a></li>
+                        	</ul>
+						</li>  
+                        <li><a href="shortcodes-lightbox.html">Lightbox</a></li>
+						<li><a href="shortcodes-maps.html"><span>Maps</span></a></li>
+                        <li><a href="shortcodes-media.html">Media</a></li>
+                        <li><a href="shortcodes-tables.html">Tables</a></li>
+                        <li><a href="shortcodes-tabs.html">Tabs and Toggles</a></li>
+                        <li><a href="shortcodes-typography.html">Typography</a></li>
+                        <li class="current-menu-item"><a href="shortcodes-widgets.html">Widgets</a></li>
+                    </ul>
+			</div> 
+            
+               
+    </div>
+    <!--/ sidebar 1 -->
+
+	<div class="clear"></div>
+</div>
+<!--/ middle -->
+
+</body>
+</html>

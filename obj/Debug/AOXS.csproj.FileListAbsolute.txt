@@ -1,0 +1,7 @@
+C:\Users\nicholas.mitchell\documents\visual studio 2010\Projects\AOXS\AOXS\bin\AOXS.dll
+C:\Users\nicholas.mitchell\documents\visual studio 2010\Projects\AOXS\AOXS\bin\AOXS.pdb
+C:\Users\nicholas.mitchell\documents\visual studio 2010\Projects\AOXS\AOXS\bin\EntityFramework.dll
+C:\Users\nicholas.mitchell\documents\visual studio 2010\Projects\AOXS\AOXS\bin\EntityFramework.xml
+C:\Users\nicholas.mitchell\documents\visual studio 2010\Projects\AOXS\AOXS\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\nicholas.mitchell\documents\visual studio 2010\Projects\AOXS\AOXS\obj\Debug\AOXS.dll
+C:\Users\nicholas.mitchell\documents\visual studio 2010\Projects\AOXS\AOXS\obj\Debug\AOXS.pdb

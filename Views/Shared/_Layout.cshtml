@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="Nick Mitchell & Superlogical 4eva. bffe. lol" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title> @ViewBag.Title </title>
+<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+
+<link href="@Url.Content("~/Content/themes/css/supersized.css")" rel="stylesheet" type="text/css" media="screen" />
+<link href="@Url.Content("~/Content/themes/style.css")" media="screen" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="@Url.Content("~/Content/themes/js/jquery.min.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Content/themes/js/preloadCssImages.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Content/themes/js/jquery.easing.1.3.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Content/themes/js/jquery.tools.min.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Content/themes/js/general.js")"></script>
+
+<script type="text/javascript" src="@Url.Content("~/Content/themes/js/slideshow/supersized.3.2.6.min.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Content/themes/js/slideshow/supersized.photoartist.js")"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+
+        $('#header_pane').toggle(function () {
+            $(this).addClass('closed').animate({ top: 0 }, 300);
+            $('.header').slideUp(300);
+            $('#slide_info_container').animate({ top: 32 }, 300);
+        }, function () {
+            $(this).removeClass('closed').animate({ top: 76 }, 300);
+            $('.header').slideDown(300);
+            $('#slide_info_container').animate({ top: 107 }, 300);
+        });
+
+        $('#slide_info_toggle').toggle(function () {
+            $(this).addClass('closed');
+            $('#slidecaption, #slidedescription').hide();
+        }, function () {
+            $(this).removeClass('closed');
+            $('#slidecaption, #slidedescription').show();
+        });
+
+        $.supersized({
+            autoplay: 1,
+
+            // Functionality
+            slide_interval: 10500, 	// Length between transitions
+            transition: 1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+            transition_speed: 600, 	// Speed of transition
+
+            // Components							
+            slide_links: 'blank', // Individual links for each slide (Options: false, 'num', 'name', 'blank')
+            slides: [			// Slideshow Images
+                    {image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_15.jpg")', title: 'SNOWBOARDING', desc: 'Want to improve your snowboarding? Find all the resources you need here to up your game in the <a href="snowboarding">Snowboarding learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_01_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_16.jpg")', title: 'SNOWBOARDING', desc: 'Want to improve your snowboarding? Find all the resources you need here to up your game in the <a href="snowboarding">Snowboarding learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_02_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_17.jpg")', title: 'SNOWBOARDING', desc: 'Want to improve your snowboarding? Find all the resources you need here to up your game in the <a href="snowboarding">Snowboarding learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_03_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_18.jpg")', title: 'SNOWBOARDING', desc: 'Want to improve your snowboarding? Find all the resources you need here to up your game in the <a href="snowboarding">Snowboarding learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_04_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_19.jpg")', title: 'SNOWBOARDING', desc: 'Want to improve your snowboarding? Find all the resources you need here to up your game in the <a href="snowboarding">Snowboarding learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_05_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_20.jpg")', title: 'SNOWBOARDING', desc: 'Want to improve your snowboarding? Find all the resources you need here to up your game in the <a href="snowboarding">Snowboarding learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_01_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_01.jpg")', title: 'WAKEBOARDING', desc: 'Want to improve your wakeboarding? Find all the resources you need here to up your game in the <a href="wakeboarding">Wakeboarding learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_02_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_02.jpg")', title: 'WAKEBOARDING', desc: 'Want to improve your wakeboarding? Find all the resources you need here to up your game in the <a href="wakeboarding">Wakeboarding learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_03_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_03.jpg")', title: 'WAKEBOARDING', desc: 'Want to improve your wakeboarding? Find all the resources you need here to up your game in the <a href="wakeboarding">Wakeboarding learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_04_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_04.jpg")', title: 'WAKEBOARDING', desc: 'Want to improve your wakeboarding? Find all the resources you need here to up your game in the <a href="wakeboarding">Wakeboarding learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_05_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_05.jpg")', title: 'WAKEBOARDING', desc: 'Want to improve your wakeboarding? Find all the resources you need here to up your game in the <a href="wakeboarding">Wakeboarding learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_01_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_06.jpg")', title: 'MOTORCROSS', desc: 'Want to improve your motorcross? Find all the resources you need here to up your game in the <a href="motorcross">Motorcross learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_02_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_07.jpg")', title: 'MOTORCROSS', desc: 'Want to improve your motorcross? Find all the resources you need here to up your game in the <a href="motorcross">Motorcross learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_03_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_08.jpg")', title: 'MOTORCROSS', desc: 'Want to improve your motorcross? Find all the resources you need here to up your game in the <a href="motorcross">Motorcross learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_04_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_09.jpg")', title: 'WAKESKATE', desc: 'Want to improve your wakeskating? Find all the resources you need here to up your game in the <a href="wakeboarding">Wakeboarding learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_05_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_10.jpg")', title: 'SKATING', desc: 'Want to improve your surfing? Find all the resources you need here to up your game in the <a href="surfing">Surfing learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_01_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_11.jpg")', title: 'SURFING', desc: 'Want to improve your surfing? Find all the resources you need here to up your game in the <a href="surfing">Surfing learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_02_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_12.jpg")', title: 'WAKEBOARDING', desc: 'Want to improve your wakeboarding? Find all the resources you need here to up your game in the <a href="wakeboarding">Wakeboarding learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_03_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_13.jpg")', title: 'SKATING', desc: 'Want to improve your skating? Find all the resources you need here to up your game in the <a href="wakeboarding">Skating learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_04_thb.jpg")' },
+                    { image: '@Url.Content("~/Content/themes/images/supersized/slides/slide_14.jpg")', title: 'SKATING', desc: 'Want to improve your skating? Find all the resources you need here to up your game in the <a href="wakeboarding">Skating learning portal</a>. <br /> <p><a>The Academy Of X-Sports (AOXS)</a> <br /> The Academy of X-Sports offers world class and open access to the best training resources on the planet for X-Sport  disciplines: Skate, Surf, Wake, Ski, Motor-X</p> <p>It is to XSports what PADI is to diving. The de facto standard in training, evaluation & certification for X-Sport disciplines, offering world class and open access to all training materials.  </p>', thumb: '@Url.Content("~/Content/themes/images/supersized/thumb/slide_05_thb.jpg")' }
+                    
+                    ]
+        });
+    });
+</script>
+		
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" /><![endif]-->
+
+</head>
+
+<body>
+<div class="header">	
+
+    <div class="logo">
+    <a href="/"> <img src="@Url.Content("~/Content/themes/images/logo.png")" alt="" /> </a>
+    <h1>AOXS - The Academy of X-Sports</h1>
+    </div>
+    
+    <div class="header_play_box">
+		<a id="play-button"><img id="pauseplay" src="@Url.Content("~/Content/themes/images/supersized/pause.png")" alt="" /></a>			
+		
+        <div class="progress_bar_bg">
+            <div id="progress-back" class="load-item">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+	</div>
+    
+    <div class="topmenu">
+		<ul class="dropdown">
+            <li> <span> @Html.ActionLink("SKATING", "Index", "Skating") </span> 
+            	<ul>
+                    <li> <span> @Html.ActionLink("Learning Portal", "Index", "Skating") </span>  </li>
+                    <li><a href="#"><span> Instructors Portal </span></a></li>
+                    <li><a href="#"><span> Gear Guide </span></a></li>
+                </ul>
+            </li>
+            <li> <span> @Html.ActionLink("SURFING", "Index", "Surfing") </span>
+            	<ul>
+                    <li> <span> @Html.ActionLink("Learning Portal", "Index", "Surfing") </span> </li>
+                    <li><a href="#"><span> Instructors Portal </span></a></li>
+                    <li><a href="#"><span> Gear Guide </span></a></li>
+                </ul>
+            </li>
+            <li> <span> @Html.ActionLink("WAKEBOARDING", "Index", "Wakeboarding") </span>
+            	<ul>
+                    <li> <span> @Html.ActionLink("Learning Portal", "Index", "Wakeboarding") </span> </li>
+                    <li><a href="#"><span> Instructors Portal </span></a></li>
+                    <li><a href="#"><span> Gear Guide </span></a></li>
+                </ul>
+            </li>
+            <li> <span> @Html.ActionLink("MOTORCROSS", "Index", "Motorcross") </span> 
+            	<ul>
+                    <li> <span> @Html.ActionLink("Learning Portal", "Index", "Motorcross") </span>  </li>
+                    <li><a href="#"><span> Instructors Portal </span></a></li>
+                    <li><a href="#"><span> Gear Guide </span></a></li>
+                </ul>
+            </li>
+            <li> <span> @Html.ActionLink("SNOWBOARDING", "Index", "Snowboarding") </span>
+            	<ul>
+                    <li> <span> @Html.ActionLink("Learning Portal", "Index", "Snowboarding") </span> </li>
+                    <li><a href="#"><span> Instructors Portal </span></a></li>
+                    <li><a href="#"><span> Gear Guide </span></a></li>
+                </ul>
+            </li>
+			<li> <span> @Html.ActionLink("Contact Us", "Index", "Contact") </span> </li>
+		</ul>
+    <div class="clear"></div>
+	</div>
+    
+    <div class="header_social">
+    	<a href="#"><img src="@Url.Content("~/Content/themes/images/icons/social_facebook_small.png")" width="23" height="23" alt="Facebook" /></a>
+        <a href="#"><img src="@Url.Content("~/Content/themes/images/icons/social_twitter_small.png")" width="23" height="23" alt="Twitter" /></a>
+        <a href="#"><img src="@Url.Content("~/Content/themes/images/icons/social_linkin_small.png")" width="23" height="23" alt="LinkedIn" /></a>
+    </div>
+        
+</div>
+<a id="header_pane"></a>
+<!--/ header -->
+
+@RenderBody()
+
+
+
+<!-- Bottom Thumb Tray -->	
+<div id="thumb-tray" class="load-item">
+	<a id="tray-button"><img alt="Button Up" id="tray-arrow" src="@Url.Content("~/Content/themes/images/supersized/button-tray-up.png")" /></a>
+</div>
+<!-- / Bottom Thumb Tray -->	
+
+</body>
+</html>

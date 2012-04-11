@@ -1,0 +1,950 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="ThemeFuse" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>Photo Artist - Standart WP Widgets</title>
+<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+
+<link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/preloadCssImages.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.tools.min.js"></script>
+<script type="text/javascript" src="js/general.js"></script>
+
+<link href="css/supersized.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="js/slideshow/supersized.3.2.6.min.js"></script>
+<script type="text/javascript" src="js/slideshow/supersized.photoartist.js"></script>
+<script type="text/javascript">
+          		jQuery(document).ready(function($) {
+
+
+                      $('#header_pane').toggle(function(){
+                              $(this).addClass('closed').animate({top: 0}, 300);
+                              $('.header').slideUp(300);
+                              $('#slide_info_container').animate({top: 32}, 300);
+                          }, function () {
+                              $(this).removeClass('closed').animate({top: 76}, 300);
+                              $('.header').slideDown(300);
+                              $('#slide_info_container').animate({top: 107}, 300);
+                      });
+
+                      $('#slide_info_toggle').toggle(function(){
+                              $(this).addClass('closed');
+                              $('#slidecaption, #slidedescription').hide();
+                          }, function () {
+                              $(this).removeClass('closed');
+                              $('#slidecaption, #slidedescription').show();
+                      });
+
+                      $.supersized({
+				
+				autoplay: 0,
+				start_slide: 0,
+			
+				// Functionality
+				slide_interval          :   4500,		// Length between transitions
+				transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+				transition_speed		:	600,		// Speed of transition
+															   
+				// Components							
+				slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+				slides 					:  	[			// Slideshow Images
+												{image : 'images/supersized/slides/slide_01.jpg'},
+												{image : 'images/supersized/slides/slide_02.jpg'}, 
+												{image : 'images/supersized/slides/slide_03.jpg'},
+												{image : 'images/supersized/slides/slide_04.jpg'},
+												{image : 'images/supersized/slides/slide_05.jpg'},
+												{image : 'images/supersized/slides/slide_06.jpg'},
+												{image : 'images/supersized/slides/slide_07.jpg'},
+												{image : 'images/supersized/slides/slide_08.jpg'},
+												{image : 'images/supersized/slides/slide_09.jpg'},
+												{image : 'images/supersized/slides/slide_10.jpg'},
+												{image : 'images/supersized/slides/slide_11.jpg'},
+												{image : 'images/supersized/slides/slide_12.jpg'},
+												{image : 'images/supersized/slides/slide_13.jpg'},
+												{image : 'images/supersized/slides/slide_14.jpg'},
+												{image : 'images/supersized/slides/slide_15.jpg'},
+												{image : 'images/supersized/slides/slide_16.jpg'},
+												{image : 'images/supersized/slides/slide_17.jpg'},
+												{image : 'images/supersized/slides/slide_18.jpg'},
+												{image : 'images/supersized/slides/slide_19.jpg'},
+												{image : 'images/supersized/slides/slide_20.jpg'}
+											]				
+			});
+		});
+</script>
+
+<script type="text/javascript" language="JavaScript" src="js/slides.min.jquery.js"></script>
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" />
+<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
+<script type="text/javascript" language="javascript" src="js/shCore.js"></script>
+<script type="text/javascript" language="javascript" src="js/shBrushPlain.js"></script>
+<link href="css/shCore.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/shThemeDefault.css" media="screen" rel="stylesheet" type="text/css" />
+
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" /><![endif]-->
+</head>
+
+<body>
+<div class="header">
+
+	<div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt=""></a>
+    <strong>Photo Artist - Wordpress theme mady by ThemeFuse</strong>
+    </div>
+    
+	<div class="header_play_box">
+		<a id="play-button"><img id="pauseplay" src="images/supersized/pause.png" alt=""></a>			
+		
+        <div class="progress_bar_bg">
+            <div id="progress-back" class="load-item">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+	</div>
+    
+    <div class="topmenu">
+		<ul class="dropdown">
+			<li class="menu-item-home"><a href="index.html"><span>Work</span></a>
+			<ul>
+					<li><a href="#"><span>LANDSCAPE & NATURE</span></a></li>
+                    <li><a href="#"><span>COMMERCIAL</span></a></li>
+                    <li><a href="#"><span>PORTRAITS & PEOPLE</span></a></li>
+                    <li><a href="#"><span>WEDDING PHOTOGRAHY</span></a></li>
+                    <li><a href="#"><span>PERSONAL PROJECTS</span></a></li>
+                    <li><a href="#"><span>VIDEO SHOOTING</span></a></li>
+              </ul>
+			</li>
+            <li><a href="blog.html"><span>Blog</span></a></li>
+          	<li><a href="#"><span>Pages</span></a>
+                    	<ul>
+                        	<li><a href="page-about.html"><span>About Me</span></a></li>
+                            <li><a href="page-sidebar-r.html"><span>Sidebar Right</span></a></li>
+                          	<li><a href="#"><span>Shortcodes</span></a>
+                                <ul>
+                                    <li><a href="shortcodes-text.html"><span>Text &amp; Images</span></a></li>
+                                    <li><a href="shortcodes-buttons.html"><span>Buttons &amp; Lists</span></a></li> 
+                                    <li><a href="shortcodes-charts.html"><span>Charts</span></a></li>  
+                                    <li><a href="shortcodes-columns.html"><span>Columns</span></a>
+                                        <ul>
+                                            <li><a href="shortcodes-full-cols2.html">Wide Content</a></li>
+                                            <li><a href="shortcodes-full-cols3.html">Two Sidebars</a></li>
+                                        </ul>
+                                    </li>  
+                                    <li><a href="shortcodes-lightbox.html"><span>Lightbox</span></a></li>
+									<li><a href="shortcodes-maps.html"><span>Maps</span></a></li>
+                                    <li><a href="shortcodes-media.html"><span>Media</span></a></li>
+                                    <li><a href="shortcodes-tables.html"><span>Tables</span></a></li>
+                                    <li><a href="shortcodes-tabs.html"><span>Tabs and Toggles</span></a></li>
+                                    <li><a href="shortcodes-typography.html"><span>Typography</span></a></li>
+                                    <li><a href="shortcodes-widgets.html"><span>Widgets</span></a></li>
+                                </ul>
+                          </li>
+                            <li><a href="page-pricing.html"><span>Pricing Page</span></a></li>
+                        </ul>
+          </li>
+			<li><a href="contact.html"><span>Contact</span></a></li>
+		</ul>
+    <div class="clear"></div>
+	</div>
+    
+    <div class="header_social">
+    	<a href="#"><img src="images/icons/social_facebook_small.png" width="23" height="23" alt=""></a>
+        <a href="#"><img src="images/icons/social_twitter_small.png" width="23" height="23" alt=""></a>
+        <a href="#"><img src="images/icons/social_linkin_small.png" width="23" height="23" alt=""></a>
+    </div>
+        
+</div>
+<!--/ header -->
+       
+<!-- middle -->
+<div class="middle cols3_fix">
+	
+   	<!-- center part -->
+    <div class="content_wrapper">
+        <!-- content -->
+        <div class="content">               
+            
+            <div class="post-item post-detail">
+                	<div class="date-box">
+                    	<span class="post-date"><strong>23</strong> Nov.2011</span>
+              		</div>
+                    
+                    <div class="post-title fixed">
+                        <h1>Best FIGHT I’ve Ever FOUGHT!</h1>
+                        <div class="post-meta-top"><a href="#" class="link-loveit">LOVE IT</a> posted by <a href="#" class="author"> Niles Patel</a> / <a href="blog-details.html">12 comments</a></div>
+                    </div>                            
+                    
+					<div class="entry">
+                    	<img src="images/temp/entry_img_1.jpg" alt="" />
+                    
+                    	<p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condim entum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orcire ac euisestibulum mollis mauris enim. Morbi euiod magna ac lorem rutrum elem entum. Donec viverra lore mispu fritesk auctor lobortis... Pellentesque eu est a nullera. placerat dignissim. </p>
+                    	<p>Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Aenean facilisis nulla vitae urna tincidunt congue sed ut dui. Morbi malesuada nulla nec purus convallis consequat. Vivamus id mollis quam. Morbi ac commodo nulla. In condimentum orci id nisl volutpat.</p>
+                    	<p>Nulla fringilla, orcire ac euisestibulum mollis mauris enim. Morbi euiod magna ac lorem rutrum elem entum. Donec viverra lore mispu fritesk auctor lobortis... Pellentesque eu est a nullera. placerat dignissim. Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus</p>
+<div class="clear"></div>     
+                  	</div>       
+			</div>
+                        
+            <!-- post comments -->
+                        <div class="comment-list" id="comments">
+                           
+                        	<h2>Comments</h2>
+                            
+                            <ol>
+								<li class="comment">
+                                
+                                    <div class="comment-body">
+                                    <div class="comment-avatar">
+                                    	<div class="avatar"><img src="images/temp/gavatar_1.jpg" width="90" height="90" alt="" /></div>
+                                        <a href="#" class="link-author">Lenny Di Natale</a>
+                                    </div>    
+                                    <div class="comment-text">
+                                    	<div class="comment-author"> <span class="comment-date">Saturday 15th of July, 2011</span></div>
+                                        <div class="comment-entry">
+                                        Britain's phone hacking claimed another casualty on Monday when Yates, the deputy of London's Metropolitan Police, resigned a day after the country's top police officer quit and Rebekah Brooks, the former chief executive of Rupert Murdoch's News International was arrested on suspicion of illegally intercepting phone calls and bribing the police
+                                        <a href="#addcomment" class="link-reply">Reply</a>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    </div>
+                                    
+                                    <!-- comment reply -->
+                                    <ul class="children">
+                                        <li class="comment">
+                                            <div class="comment-body">
+                                                <div class="comment-avatar">
+                                                    <div class="avatar"><img src="images/temp/gavatar_2.jpg" width="90" height="90" alt="" /></div>
+                                                    <a href="#" class="link-author">Ari Gold</a>
+                                                </div> 
+                                                <div class="comment-text">
+                                                	<div class="comment-author"><span class="comment-date">Saturday 15th of July, 2011</span></div>
+                                                    <div class="comment-entry">Rebekah Brooks, the former chief executive of Rupert Murdoch's News International was arrested on suspicion of illegally intercepting phone calls and bribing the police. <a href="#addcomment" class="link-reply">Reply</a>                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+                                            
+                                            
+                                        </li>
+                                        
+                                    </ul>
+                                    <!--/ comment reply -->
+                                </li>
+                                
+                                <li class="comment">
+                                    <div class="comment-body">
+                                
+                                    <div class="comment-avatar">
+                                    	<div class="avatar"><img src="images/temp/gavatar_3.jpg" width="90" height="90" alt="" /></div>
+                                        <a href="#" class="link-author">JamieHale</a>
+                                    </div> 
+                                    <div class="comment-text">
+                                        <div class="comment-author"><span class="comment-date">Sunday 16th of July, 2011</span></div>
+                                        <div class="comment-entry">There's every chance your competitors will wish they'd placed this entry, not you. While your customers will have probably forgotten. <a href="#addcomment" class="link-reply">Reply</a>                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    </div>
+                                </li>
+                                
+                            </ol>
+                        </div>
+				<!--/ post comments -->
+                        
+                <!-- add comment -->
+                        <div class="box2 add-comment" id="addcomments">
+                            <h3>Leave a Reply</h3>
+                            
+                            <div class="box2_content comment-form">
+                            <form action="#" method="post">
+                                
+                                <div class="row alignleft">
+                                    <label><strong>Name</strong></label>
+                                    <input type="text" name="name" value="" class="inputtext input_middle required" />
+                                </div>
+                                
+                                <div class="space"></div>
+                                
+                                <div class="row  alignleft">
+                                    <label><strong>Email</strong> (never published)</label>
+                                    <input type="text" name="email" value="" class="inputtext input_middle required" />
+                                </div>
+								
+                                <div class="clear"></div>   
+                                
+                                <div class="row">
+                                    <label><strong>Website</strong></label>
+                                    <input type="text" name="url" value="" class="inputtext input_full" />
+                                </div>
+                                
+                                <div class="row">
+                                    <label><strong>Comment</strong></label>
+                                    <textarea cols="30" rows="10" name="message" class="textarea textarea_middle required"></textarea>
+                                </div>
+                                
+                                <div class="row rowSubmit">
+                                <input type="submit" value="POSTS COMMENT" class="btn-submit" />
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+                <!--/add comment --> 
+            
+            
+            
+        </div>
+        <!--/ content -->
+    
+    	<!-- sidebar 2 -->
+        <div class="sidebar sidebar_2"> 
+        
+        	<div id="categories-2" class="widget-container widget_categories">
+				<h3 class="widget-title">Categories</h3>  
+                    <ul>
+                        <li class="cat-item current-menu-item"><a href="#">Photography</a>
+                        	<ul>
+                            	<li><a href="#"><span>Nature</span></a></li>
+                                <li><a href="#"><span>People</span></a></li>
+                                <li><a href="#"><span>Art &amp; Fashion</span></a></li>
+                                <li><a href="#"><span>Commercial</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="cat-item"><a href="#">Video &amp; Motion</a></li>
+                        <li class="cat-item"><a href="#">My Thoughts</a></li>
+                        <li class="cat-item"><a href="#">About my work</a></li>
+                    </ul>
+			</div>  
+    	
+			<div id="archives-3" class="widget-container widget_archive">
+				<h3 class="widget-title">Archives</h3>		
+                    <ul>
+                        <li><a href='#' title='June 2011'>June 2011</a></li>
+                        <li><a href='#' title='June 2011'>June 2011</a></li>
+                        <li><a href='#' title='May 2011'>May 2011</a></li>
+                        <li><a href='#' title='April 2011'>April 2011</a></li>
+                        <li><a href='#' title='March  2011'>March 2011</a></li>
+                    </ul>
+			</div>    
+            
+            <!-- search widget -->
+			<div class="widget-container widget_search">
+                        <h3>SEARCH THIS BLOG</h3>
+                            <form method="get" id="searchform" action="#">
+                                <div>
+                                  <label class="screen-reader-text" for="s">Search for:</label>
+                                    <input class="input_search" name="s" id="s" value="enter keywords" onFocus="if (this.value == 'enter keywords') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'enter keywords';}" type="text" />
+                                    <input id="searchsubmit" class="btn-submit" value="Submit" type="submit" />
+                                </div>
+                            </form>
+			</div> 
+			<!--/ search widget -->
+            
+            <div class="widget-container widget_recent_entries">
+				<h3 class="widget-title">Recent Posts</h3>
+					<ul>
+                        <li>
+                        <a href="blog-details.html"><img src="images/temp/post_thumb_1.jpg" alt="" class="thumbnail" border="0" width="62" height="62" /></a> 
+                        <div class="recent_entry">
+                        <a href="blog-details.html" class="link-name">Why cops love donuts?</a>
+                        <div class="meta"><span class="link-comments">12</span> <span class="link-loveit">38</span> <a href="#" class="link-more">read it</a></div>
+                        </div>
+                        </li>
+                        <li>
+                        <a href="blog-details.html"><img src="images/temp/post_thumb_2.jpg" alt="" class="thumbnail" border="0" width="62" height="62" /></a> 
+                        <div class="recent_entry">
+                        <a href="blog-details.html" class="link-name">Save the grizzly bears!</a>
+                        <div class="meta"><span class="link-comments">12</span> <span class="link-loveit">38</span> <a href="#" class="link-more">read it</a></div>
+                        </div>
+                        </li>
+                        <li>
+                        <a href="blog-details.html"><img src="images/temp/post_thumb_3.jpg" alt="" class="thumbnail" border="0" width="62" height="62" /></a> 
+                        <div class="recent_entry">
+                        <a href="blog-details.html" class="link-name">Iguana's Bar and Grill</a>
+                        <div class="meta"><span class="link-comments">12</span> <span class="link-loveit">38</span> <a href="#" class="link-more">read it</a></div>
+                        </div>
+                        </li>
+                        <li>
+                        <a href="blog-details.html"><img src="images/temp/post_thumb_4.jpg" alt="" class="thumbnail" border="0" width="62" height="62" /></a> 
+                        <div class="recent_entry">
+                        <a href="blog-details.html" class="link-name">Going kayaking this...</a>
+                        <div class="meta"><span class="link-comments">12</span> <span class="link-loveit">38</span> <a href="#" class="link-more">read it</a></div>
+                        </div>
+                        </li>
+					</ul>
+			</div>
+            
+            <div class="widget-container widget_recent_comments">
+                    <h3 class="widget-title">Recent Comments</h3>
+                    <ul id="recentcomments">
+                        <li class="recentcomments"><a href="blog-details.html"><img src="images/temp/post_thumb_2.jpg" alt="" class="thumbnail" border="0" height="30" width="30" /></a> <span class="recent_comment"><a href="#" rel="external nofollow" class="url">Mr WordPress:</a> Hong Kong Phooey, number one super guy, he is quicker than the human eye</span><span class="clear"></span></li>
+                        <li class="recentcomments"><a href="blog-details.html"><img src="images/temp/post_thumb_1.jpg" alt="" class="thumbnail" border="0" height="30" width="30" /></a> <span class="recent_comment"><a href="#" rel="external nofollow" class="url">Julia Styles:</a> Exactly, just wish we could find a better solution...</span><span class="clear"></span></li>
+                        <li class="recentcomments"><a href="blog-details.html"><img src="images/temp/post_thumb_4.jpg" alt="" class="thumbnail" border="0" height="30" width="30" /></a> <span class="recent_comment"><a href="#" rel="external nofollow" class="url">Studebaker:</a>  Seems OK to me ;)</span><span class="clear"></span></li>
+                        <li class="recentcomments"><a href="blog-details.html"><img src="images/temp/post_thumb_3.jpg" alt="" class="thumbnail" border="0" height="30" width="30" /></a> <span class="recent_comment"><a href="#" rel="external nofollow" class="url">Serj Bagrin:</a> only thing i’d like to change is the whole thing by implementing the code snippets inside the framework</span><span class="clear"></span></li>
+                    </ul>
+			</div>
+                   
+            
+            <div id="tag_cloud-3" class="widget-container widget_tag_cloud">
+                    <h3 class="widget-title">POPULAR TAGS</h3>
+                    <div class="tagcloud">
+                        <a href='#' class='tag-link-4' title='2 topics' style='font-size: 10pt;'>Photography</a>
+                        <a href='#' class='tag-link-7' title='3 topics' style='font-size: 15pt;'>Outdoor</a>
+                        <a href='#' class='tag-link-3' title='2 topics' style='font-size: 10pt;'>Videos</a>
+                        <a href='#' class='tag-link-6' title='3 topics' style='font-size: 18pt;'>Funny</a>
+                        <a href='#' class='tag-link-5' title='2 topics' style='font-size: 10pt;'>Photoshop</a>
+                        <a href='#' class='tag-link-5' title='2 topics' style='font-size: 13pt;'>Tutorial</a>
+                        <a href='#' class='tag-link-5' title='2 topics' style='font-size: 15pt;'>Webdesign</a>
+                        <a href='#' class='tag-link-5' title='2 topics' style='font-size: 18pt;'>Illustration</a>
+                        <a href='#' class='tag-link-4' title='2 topics' style='font-size: 10pt;'>Lighting</a>
+                        <a href='#' class='tag-link-4' title='2 topics' style='font-size: 10pt;'>How to</a>
+                        <a href='#' class='tag-link-4' title='2 topics' style='font-size: 15pt;'>Design</a>
+                    </div>
+			</div>
+            
+            <div class="widget-container widget_flickr">
+                    <h3 class="widget-title">IMAGE GALLERY</h3>
+                    <div class="flickr">
+                    
+                    	<div class="flickr_badge_image" id="flickr_badge_image1"><a href="http://www.flickr.com/photos/themefuse/4745967918/"><img src="http://farm5.static.flickr.com/4122/4745967918_6780fd65ff_s.jpg" alt="A photo on Flickr" title="Bon Apetit HTML/WP template - Homepage" height="75" width="75" /></a></div>
+                        <div class="flickr_badge_image" id="flickr_badge_image2"><a href="http://www.flickr.com/photos/themefuse/4745967666/"><img src="http://farm5.static.flickr.com/4119/4745967666_b996719848_s.jpg" alt="A photo on Flickr" title="TechOffers HTML Newsletter" height="75" width="75" /></a></div>
+                        <div class="flickr_badge_image" id="flickr_badge_image3"><a href="http://www.flickr.com/photos/themefuse/4745329921/"><img src="http://farm5.static.flickr.com/4100/4745329921_23b2c3eb01_s.jpg" alt="A photo on Flickr" title="SiliconApp HTML/WP template - Support" height="75" width="75" /></a></div>
+                        <div class="flickr_badge_image" id="flickr_badge_image4"><a href="http://www.flickr.com/photos/themefuse/4745329719/"><img src="http://farm5.staticflickr.com/4074/4745329719_624b0af07a_s.jpg" alt="A photo on Flickr" title="TechOffers HTML Newsletter" height="75" width="75" /></a></div>
+                        <div class="flickr_badge_image" id="flickr_badge_image5"><a href="http://www.flickr.com/photos/themefuse/4745969376/"><img src="http://farm5.staticflickr.com/4093/4745330557_3a0782a879_s.jpg" alt="A photo on Flickr" title="Art Gallery HTML/WP template - Homepage" height="75" width="75" /></a></div>                        
+                        <div class="flickr_badge_image" id="flickr_badge_image6"><a href="http://www.flickr.com/photos/themefuse/4745330159/"><img src="http://farm5.staticflickr.com/4075/4745330159_b0e28f2221_s.jpg" alt="A photo on Flickr" title="Bon Apetit HTML/WP template - Homepage" height="75" width="75" /></a></div>
+                        
+                        <span style="position: absolute; left: -999em; top: -999em; visibility: hidden;" class="flickr_badge_beacon"><img src="http://geo.yahoo.com/p?s=792600102&amp;t=a268516684fee260dc5cde12b3bc2bba&amp;r=http%3A%2F%2Fthemefuse.com%2Fdemo%2Fwp%2Fqlassik%2F%3Fpage_id%3D425&amp;fl_ev=0&amp;lang=en&amp;intl=us" alt="" height="0" width="0" /></span> 
+                        <div class="clear"></div>
+					</div>
+			</div>
+            
+            <div class="widget-container widget_twitter">
+				<h3>Twitter Activity</h3>   
+               
+  		    	<div class="tweet_item">
+                	<div class="tweet_image"><img src="images/temp/twitter_avatar.png" width="30" height="30" alt="" /></div>
+                    <div class="tweet_text">
+                    	<div class="inner">
+		    	  		<a href="#">@LesPaul:</a> the guitar's probably worth at least $25k. Interested?
+                    	</div>
+                    </div>
+                    <div class="clear"></div>
+	  		  	</div>   
+                
+                <div class="tweet_item">
+                	<div class="tweet_image"><img src="images/temp/twitter_avatar.png" width="30" height="30" alt="" /></div>
+                    <div class="tweet_text">
+                    	<div class="inner">
+		    	  		<a href="#">@Serendipity:</a> knowing you, every bit of time spent on that car is like a vacation in paradise
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+	  		  	</div>
+                
+                <div class="tweet_item">
+                	<div class="tweet_image"><img src="images/temp/twitter_avatar.png" width="30" height="30" alt="" /></div>
+                    <div class="tweet_text">
+                    	<div class="inner">
+		    	  		<a href="#">@LesPaul:</a> great news!
+                    	</div>
+                    </div>
+                    <div class="clear"></div>
+	  		  	</div>
+                
+			</div>
+            
+            <!--/ twiiter -->
+                    
+        	<!-- login widget -->
+                    <div class="widget-container widget_login">
+                    	<h3>Login  Form</h3>
+                        
+                      <form action="#" method="post" id="loginform" class="loginform">
+                        
+                        <p><label>Username</label><br />
+                        <input name="log" id="user_login" class="input" value="" size="20" tabindex="10" type="text"></p>
+						<p><label>Password</label><br />
+                        <input name="pwd" id="user_pass" class="input" value="" size="20" tabindex="20" type="password"></p>
+                        
+                        <p class="forgetmenot"><input name="rememberme" type="checkbox" id="rememberme" value="forever" tabindex="90" /><label>Remember Me</label></p>
+                        
+                        <p class="forget_password"><a href="#">Forgot Password?</a></p>   
+                        
+                        <p class="submit">
+                            <input type="submit" name="wp-submit" id="wp-submit" class="btn-submit" value="LOGIN NOW" tabindex="100" />
+                            <input type="hidden" name="redirect_to" value="" />
+                            <input type="hidden" name="testcookie" value="1" />
+                        </p>                        
+                        
+                      </form>
+                    </div>
+				<!--/ login widget -->
+                
+                <div id="calendar-3" class="widget-container widget_calendar">                	
+                	<div id="calendar_wrap">
+                    <table id="wp-calendar" summary="Calendar">
+                    <caption>April 2011</caption>
+                
+                    <thead>
+                    <tr>
+                        <th scope="col" title="Monday">M</th>
+                        <th scope="col" title="Tuesday">T</th>
+                        <th scope="col" title="Wednesday">W</th>
+                        <th scope="col" title="Thursday">T</th>
+                        <th scope="col" title="Friday">F</th>
+                
+                        <th scope="col" title="Saturday">S</th>
+                        <th scope="col" title="Sunday">S</th>
+                    </tr>
+                    </thead>
+                
+                    <tfoot>
+                    <tr>
+                        <td colspan="3" id="prev"><a href="http://themefuse.com/test/htmldev/2011/02/" title="View posts for March 2011">« Mar</a></td>
+                        <td class="pad">&nbsp;</td>
+                        <td colspan="3" id="next"><a href="http://themefuse.com/test/htmldev/2011/05/" title="View posts for May 2011">May »</a></td>
+                    </tr>
+                    </tfoot>
+                
+                    <tbody>
+                    <tr>
+                        <td colspan="6" class="pad">&nbsp;</td><td>1</td>
+                    </tr>
+                
+                    <tr>
+                        <td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
+                    </tr>
+                    <tr>
+                        <td>9</td><td><a href="http://themefuse.com/test/htmldev/2011/05/10/" title="Hello world!, Test 3">10</a></td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+                
+                    </tr>
+                    <tr>
+                        <td>16</td><td>17</td><td id="today">18</td><td>19</td><td>20</td><td>21</td><td>22</td>
+                    </tr>
+                    <tr>
+                
+                        <td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>
+                    </tr>
+                    <tr>
+                        <td>30</td><td>31</td>
+                
+                        <td class="pad" colspan="5">&nbsp;</td>
+                    </tr>
+                    </tbody>
+                    </table></div>
+                </div>
+                
+                <div id="linkcat-2" class="widget-container widget_links">
+                	<h3 class="widget-title">Blogroll</h3>
+                    <ul class='blogroll'>
+                        <li><a href="http://codex.wordpress.org/">Documentation</a></li>
+                        <li><a href="http://wordpress.org/extend/plugins/">Plugins</a></li>
+                        <li><a href="http://wordpress.org/support/">Support Forum</a></li>
+                    </ul>
+                </div>
+                
+                <div id="meta-2" class="widget-container widget_meta">
+                    <h3 class="widget-title">Meta</h3>
+                    <ul>
+                        <li><a href="http://themefuse.com/test/htmldev/wp-login.php?action=register">Register</a></li>
+                        <li><a href="http://themefuse.com/test/htmldev/wp-login.php">Log in</a></li>
+                        <li><a href="http://themefuse.com/test/htmldev/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+                        <li><a href="http://themefuse.com/test/htmldev/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>           
+                        <li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+                    </ul>
+                </div>
+                
+                <div id="categories-5" class="widget-container widget_nav_menu">
+                	<h3 class="widget-title">WP Nav Menu</h3>
+                    <ul>
+                        <li><a href="#"><span>Medical Center Tour</span></a></li>                            
+                        <li><a href="#"><span>Staff & Personal</span></a>
+                        	<ul>
+								<li><a href="#"><span>Full Width</span></a></li>
+                                <li><a href="#"><span>Two Columns</span></a></li>
+                                <li><a href="#"><span>Three Columns</span></a></li>
+                            </ul>
+                        </li>  
+                        <li><a href="#"><span>Our History</span></a></li>  
+                        <li><a href="#"><span>Experience & Technology</span></a></li>  
+                        <li><a href="#"><span>Why our facility?</span></a></li>  
+                    </ul>
+                </div>
+                
+                <div class="widget-container widget_pages">
+				<h3 class="widget-title">Pages</h3>  
+                    <ul>
+                        <li><a href="shortcodes-text.html">Text &amp; Images</a></li>
+                        <li><a href="shortcodes-buttons.html">Buttons &amp; Lists</a></li> 
+                        <li><a href="shortcodes-charts.html">Charts</a></li>  
+                        <li><a href="shortcodes-columns.html">Columns</a>
+                        	<ul>
+								<li><a href="shortcodes-full-cols2.html">Wide Content</a></li>
+								<li><a href="shortcodes-full-cols3.html">Two Sidebars</a></li>
+                        	</ul>
+						</li>  
+                        <li><a href="shortcodes-lightbox.html">Lightbox</a></li>
+						<li><a href="shortcodes-maps.html"><span>Maps</span></a></li>
+                        <li><a href="shortcodes-media.html">Media</a></li>
+                        <li><a href="shortcodes-tables.html">Tables</a></li>
+                        <li><a href="shortcodes-tabs.html">Tabs and Toggles</a></li>
+                        <li><a href="shortcodes-typography.html">Typography</a></li>
+                        <li><a href="shortcodes-widgets.html">Widgets</a></li>
+                    </ul>
+			</div> 
+                
+                
+                <div id="text-3" class="widget-container widget_text">
+                    <h3 class="widget-title">Text Widget Title</h3>
+                    <div class="textwidget">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s... </div>
+				</div>	
+                
+                
+                <!-- newsletter widget -->
+                         <div class="widget-container newsletterBox">
+                            <div class="inner">
+                                <h3>Newsletter:</h3>
+                                <form method="get" id="subscribe" action="#">
+                                    <input type="text" value="ENTER your email address" onFocus="if (this.value == 'ENTER your email address') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'ENTER your email address';}" name="email" class="inputField" />
+                                    <input type="submit" value="Send" class="btn-arrow" />
+                                    <div class="newsletter_text"><a href="#" class="link-news-rss">You can also subscribe to <span>our RSS</span></a></div>
+                                </form>     
+                            </div>
+                        </div>
+				<!--/ newsletter widget -->
+            
+                      
+        </div>
+        <!--/ sidebar 2 -->
+        <div class="clear"></div>
+    </div>
+    <!--/ center part -->
+    
+    <!-- sidebar 1 -->
+    <div class="sidebar sidebar_1">  
+    
+    		<div id="categories-2" class="widget-container widget_categories">
+				<h3 class="widget-title">Categories</h3>  
+                    <ul>
+                        <li class="cat-item current-menu-item"><a href="#">Photography</a>
+                        	<ul>
+                            	<li><a href="#"><span>Nature</span></a></li>
+                                <li><a href="#"><span>People</span></a></li>
+                                <li><a href="#"><span>Art &amp; Fashion</span></a></li>
+                                <li><a href="#"><span>Commercial</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="cat-item"><a href="#">Video &amp; Motion</a></li>
+                        <li class="cat-item"><a href="#">My Thoughts</a></li>
+                        <li class="cat-item"><a href="#">About my work</a></li>
+                    </ul>
+			</div>  
+    	
+			<div id="archives-3" class="widget-container widget_archive">
+				<h3 class="widget-title">Archives</h3>		
+                    <ul>
+                        <li><a href='#' title='June 2011'>June 2011</a></li>
+                        <li><a href='#' title='June 2011'>June 2011</a></li>
+                        <li><a href='#' title='May 2011'>May 2011</a></li>
+                        <li><a href='#' title='April 2011'>April 2011</a></li>
+                        <li><a href='#' title='March  2011'>March 2011</a></li>
+                    </ul>
+			</div>    
+            
+            <!-- search widget -->
+			<div class="widget-container widget_search">
+                        <h3>SEARCH THIS BLOG</h3>
+                            <form method="get" id="searchform" action="#">
+                                <div>
+                                  <label class="screen-reader-text" for="s">Search for:</label>
+                                    <input class="input_search" name="s" id="s" value="enter keywords" onFocus="if (this.value == 'enter keywords') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'enter keywords';}" type="text" />
+                                    <input id="searchsubmit" class="btn-submit" value="Submit" type="submit" />
+                                </div>
+                            </form>
+			</div> 
+			<!--/ search widget -->
+            
+            <div class="widget-container widget_recent_entries">
+				<h3 class="widget-title">Recent Posts</h3>
+					<ul>
+                        <li>
+                        <a href="blog-details.html"><img src="images/temp/post_thumb_1.jpg" alt="" class="thumbnail" border="0" width="62" height="62" /></a> 
+                        <div class="recent_entry">
+                            <a href="blog-details.html" class="link-name">Why cops love donuts?</a>
+                            <div class="meta"><span class="link-comments">12</span> <span class="link-loveit">38</span> <a href="#" class="link-more">read it</a></div>
+                        </div>
+                        </li>
+                        <li>
+                        <a href="blog-details.html"><img src="images/temp/post_thumb_2.jpg" alt="" class="thumbnail" border="0" width="62" height="62" /></a> 
+                        <div class="recent_entry">
+                        	<a href="blog-details.html" class="link-name">Save the grizzly bearss!</a>
+                        	<div class="meta"><span class="link-comments">12</span> <span class="link-loveit">38</span> <a href="#" class="link-more">read it</a></div>
+                        </div>
+                        </li>
+                        <li>
+                        <a href="blog-details.html"><img src="images/temp/post_thumb_3.jpg" alt="" class="thumbnail" border="0" width="62" height="62" /></a> 
+                        <div class="recent_entry">
+                        <a href="blog-details.html" class="link-name">Iguana's Bar and Grill</a>
+                        <div class="meta"><span class="link-comments">12</span> <span class="link-loveit">38</span> <a href="#" class="link-more">read it</a></div>
+                        </div>
+                        </li>
+                        <li>
+                        <a href="blog-details.html"><img src="images/temp/post_thumb_4.jpg" alt="" class="thumbnail" border="0" width="62" height="62" /></a> 
+                        <div class="recent_entry">
+                        <a href="blog-details.html" class="link-name">Going kayaking this...</a>
+                        <div class="meta"><span class="link-comments">12</span> <span class="link-loveit">38</span> <a href="#" class="link-more">read it</a></div>
+                        </div>
+                        </li>
+					</ul>
+			</div>
+            
+            <div class="widget-container widget_recent_comments">
+                    <h3 class="widget-title">Recent Comments</h3>
+                    <ul id="recentcomments">
+                        <li class="recentcomments"><a href="blog-details.html"><img src="images/temp/post_thumb_2.jpg" alt="" class="thumbnail" border="0" height="30" width="30" /></a> <span class="recent_comment"><a href="#" rel="external nofollow" class="url">Mr WordPress:</a> Hong Kong Phooey, number one super guy, he is quicker than the human eye</span><span class="clear"></span></li>
+                        <li class="recentcomments"><a href="blog-details.html"><img src="images/temp/post_thumb_1.jpg" alt="" class="thumbnail" border="0" height="30" width="30" /></a> <span class="recent_comment"><a href="#" rel="external nofollow" class="url">Julia Styles:</a> Exactly, just wish we could find a better solution...</span><span class="clear"></span></li>
+                        <li class="recentcomments"><a href="blog-details.html"><img src="images/temp/post_thumb_4.jpg" alt="" class="thumbnail" border="0" height="30" width="30" /></a> <span class="recent_comment"><a href="#" rel="external nofollow" class="url">Studebaker:</a>  Seems OK to me ;)</span><span class="clear"></span></li>
+                        <li class="recentcomments"><a href="blog-details.html"><img src="images/temp/post_thumb_3.jpg" alt="" class="thumbnail" border="0" height="30" width="30" /></a> <span class="recent_comment"><a href="#" rel="external nofollow" class="url">Serj Bagrin:</a> only thing i’d like to change is the whole thing by implementing the code snippets inside the framework</span><span class="clear"></span></li>
+                    </ul>
+			</div>
+                   
+            
+            <div id="tag_cloud-3" class="widget-container widget_tag_cloud">
+                    <h3 class="widget-title">POPULAR TAGS</h3>
+                    <div class="tagcloud">
+                        <a href='#' class='tag-link-4' title='2 topics' style='font-size: 10pt;'>Photography</a>
+                        <a href='#' class='tag-link-7' title='3 topics' style='font-size: 15pt;'>Outdoor</a>
+                        <a href='#' class='tag-link-3' title='2 topics' style='font-size: 10pt;'>Videos</a>
+                        <a href='#' class='tag-link-6' title='3 topics' style='font-size: 18pt;'>Funny</a>
+                        <a href='#' class='tag-link-5' title='2 topics' style='font-size: 10pt;'>Photoshop</a>
+                        <a href='#' class='tag-link-5' title='2 topics' style='font-size: 13pt;'>Tutorial</a>
+                        <a href='#' class='tag-link-5' title='2 topics' style='font-size: 15pt;'>Webdesign</a>
+                        <a href='#' class='tag-link-5' title='2 topics' style='font-size: 18pt;'>Illustration</a>
+                        <a href='#' class='tag-link-4' title='2 topics' style='font-size: 10pt;'>Lighting</a>
+                        <a href='#' class='tag-link-4' title='2 topics' style='font-size: 10pt;'>How to</a>
+                        <a href='#' class='tag-link-4' title='2 topics' style='font-size: 15pt;'>Design</a>
+                    </div>
+			</div>
+            
+            <div class="widget-container widget_flickr">
+                    <h3 class="widget-title">IMAGE GALLERY</h3>
+                    <div class="flickr">
+                    
+                    	<div class="flickr_badge_image" id="flickr_badge_image1"><a href="http://www.flickr.com/photos/themefuse/4745967918/"><img src="http://farm5.static.flickr.com/4122/4745967918_6780fd65ff_s.jpg" alt="A photo on Flickr" title="Bon Apetit HTML/WP template - Homepage" height="75" width="75" /></a></div>
+                        <div class="flickr_badge_image" id="flickr_badge_image2"><a href="http://www.flickr.com/photos/themefuse/4745967666/"><img src="http://farm5.static.flickr.com/4119/4745967666_b996719848_s.jpg" alt="A photo on Flickr" title="TechOffers HTML Newsletter" height="75" width="75" /></a></div>
+                        <div class="flickr_badge_image" id="flickr_badge_image3"><a href="http://www.flickr.com/photos/themefuse/4745329921/"><img src="http://farm5.static.flickr.com/4100/4745329921_23b2c3eb01_s.jpg" alt="A photo on Flickr" title="SiliconApp HTML/WP template - Support" height="75" width="75" /></a></div>
+                        <div class="flickr_badge_image" id="flickr_badge_image4"><a href="http://www.flickr.com/photos/themefuse/4745329719/"><img src="http://farm5.staticflickr.com/4074/4745329719_624b0af07a_s.jpg" alt="A photo on Flickr" title="TechOffers HTML Newsletter" height="75" width="75" /></a></div>
+                        <div class="flickr_badge_image" id="flickr_badge_image5"><a href="http://www.flickr.com/photos/themefuse/4745969376/"><img src="http://farm5.staticflickr.com/4093/4745330557_3a0782a879_s.jpg" alt="A photo on Flickr" title="Art Gallery HTML/WP template - Homepage" height="75" width="75" /></a></div>                        
+                        <div class="flickr_badge_image" id="flickr_badge_image6"><a href="http://www.flickr.com/photos/themefuse/4745330159/"><img src="http://farm5.staticflickr.com/4075/4745330159_b0e28f2221_s.jpg" alt="A photo on Flickr" title="Bon Apetit HTML/WP template - Homepage" height="75" width="75" /></a></div>
+                        
+                        <span style="position: absolute; left: -999em; top: -999em; visibility: hidden;" class="flickr_badge_beacon"><img src="http://geo.yahoo.com/p?s=792600102&amp;t=a268516684fee260dc5cde12b3bc2bba&amp;r=http%3A%2F%2Fthemefuse.com%2Fdemo%2Fwp%2Fqlassik%2F%3Fpage_id%3D425&amp;fl_ev=0&amp;lang=en&amp;intl=us" alt="" height="0" width="0" /></span> 
+                        <div class="clear"></div>
+					</div>
+			</div>
+            
+            <div class="widget-container widget_twitter">
+				<h3>Twitter Activity</h3>   
+               
+  		    	<div class="tweet_item">
+                	<div class="tweet_image"><img src="images/temp/twitter_avatar.png" width="30" height="30" alt="" /></div>
+                    <div class="tweet_text">
+                    	<div class="inner">
+		    	  		<a href="#">@LesPaul:</a> the guitar's probably worth at least $25k. Interested?
+                    	</div>
+                    </div>
+                    <div class="clear"></div>
+	  		  	</div>   
+                
+                <div class="tweet_item">
+                	<div class="tweet_image"><img src="images/temp/twitter_avatar.png" width="30" height="30" alt="" /></div>
+                    <div class="tweet_text">
+                    	<div class="inner">
+		    	  		<a href="#">@Serendipity:</a> knowing you, every bit of time spent on that car is like a vacation in paradise
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+	  		  	</div>
+                
+                <div class="tweet_item">
+                	<div class="tweet_image"><img src="images/temp/twitter_avatar.png" width="30" height="30" alt="" /></div>
+                    <div class="tweet_text">
+                    	<div class="inner">
+		    	  		<a href="#">@LesPaul:</a> great news!
+                    	</div>
+                    </div>
+                    <div class="clear"></div>
+	  		  	</div>
+                
+			</div>
+            
+            <!--/ twiiter -->
+                    
+        	<!-- login widget -->
+                    <div class="widget-container widget_login">
+                    	<h3>Login  Form</h3>
+                        
+                      <form action="#" method="post" id="loginform" class="loginform">
+                        
+                        <p><label>Username</label><br />
+                        <input name="log" id="user_login" class="input" value="" size="20" tabindex="10" type="text"></p>
+						<p><label>Password</label><br />
+                        <input name="pwd" id="user_pass" class="input" value="" size="20" tabindex="20" type="password"></p>
+                        
+                        <p class="forgetmenot"><input name="rememberme" type="checkbox" id="rememberme" value="forever" tabindex="90" /><label>Remember Me</label></p>
+                        
+                        <p class="forget_password"><a href="#">Forgot Password?</a></p>   
+                        
+                        <p class="submit">
+                            <input type="submit" name="wp-submit" id="wp-submit" class="btn-submit" value="LOGIN NOW" tabindex="100" />
+                            <input type="hidden" name="redirect_to" value="" />
+                            <input type="hidden" name="testcookie" value="1" />
+                        </p>                        
+                        
+                      </form>
+                    </div>
+				<!--/ login widget -->
+                
+                <div id="calendar-3" class="widget-container widget_calendar">                	
+                	<div id="calendar_wrap">
+                    <table id="wp-calendar" summary="Calendar">
+                    <caption>April 2011</caption>
+                
+                    <thead>
+                    <tr>
+                        <th scope="col" title="Monday">M</th>
+                        <th scope="col" title="Tuesday">T</th>
+                        <th scope="col" title="Wednesday">W</th>
+                        <th scope="col" title="Thursday">T</th>
+                        <th scope="col" title="Friday">F</th>
+                
+                        <th scope="col" title="Saturday">S</th>
+                        <th scope="col" title="Sunday">S</th>
+                    </tr>
+                    </thead>
+                
+                    <tfoot>
+                    <tr>
+                        <td colspan="3" id="prev"><a href="http://themefuse.com/test/htmldev/2011/02/" title="View posts for March 2011">« Mar</a></td>
+                        <td class="pad">&nbsp;</td>
+                        <td colspan="3" id="next"><a href="http://themefuse.com/test/htmldev/2011/05/" title="View posts for May 2011">May »</a></td>
+                    </tr>
+                    </tfoot>
+                
+                    <tbody>
+                    <tr>
+                        <td colspan="6" class="pad">&nbsp;</td><td>1</td>
+                    </tr>
+                
+                    <tr>
+                        <td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
+                    </tr>
+                    <tr>
+                        <td>9</td><td><a href="http://themefuse.com/test/htmldev/2011/05/10/" title="Hello world!, Test 3">10</a></td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+                
+                    </tr>
+                    <tr>
+                        <td>16</td><td>17</td><td id="today">18</td><td>19</td><td>20</td><td>21</td><td>22</td>
+                    </tr>
+                    <tr>
+                
+                        <td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>
+                    </tr>
+                    <tr>
+                        <td>30</td><td>31</td>
+                
+                        <td class="pad" colspan="5">&nbsp;</td>
+                    </tr>
+                    </tbody>
+                    </table></div>
+                </div>
+                
+                <div id="linkcat-2" class="widget-container widget_links">
+                	<h3 class="widget-title">Blogroll</h3>
+                    <ul class='blogroll'>
+                        <li><a href="http://codex.wordpress.org/">Documentation</a></li>
+                        <li><a href="http://wordpress.org/extend/plugins/">Plugins</a></li>
+                        <li><a href="http://wordpress.org/support/">Support Forum</a></li>
+                    </ul>
+                </div>
+                
+                <div id="meta-2" class="widget-container widget_meta">
+                    <h3 class="widget-title">Meta</h3>
+                    <ul>
+                        <li><a href="http://themefuse.com/test/htmldev/wp-login.php?action=register">Register</a></li>
+                        <li><a href="http://themefuse.com/test/htmldev/wp-login.php">Log in</a></li>
+                        <li><a href="http://themefuse.com/test/htmldev/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+                        <li><a href="http://themefuse.com/test/htmldev/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>           
+                        <li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+                    </ul>
+                </div>
+                
+                <div id="categories-5" class="widget-container widget_nav_menu">
+                	<h3 class="widget-title">WP Nav Menu</h3>
+                    <ul>
+                        <li><a href="#"><span>Medical Center Tour</span></a></li>                            
+                        <li><a href="#"><span>Staff & Personal</span></a>
+                        	<ul>
+								<li><a href="#"><span>Full Width</span></a></li>
+                                <li><a href="#"><span>Two Columns</span></a></li>
+                                <li><a href="#"><span>Three Columns</span></a></li>
+                            </ul>
+                        </li>  
+                        <li><a href="#"><span>Our History</span></a></li>  
+                        <li><a href="#"><span>Experience & Technology</span></a></li>  
+                        <li><a href="#"><span>Why our facility?</span></a></li>  
+                    </ul>
+                </div>
+                
+                <div class="widget-container widget_pages">
+				<h3 class="widget-title">Pages</h3>  
+                    <ul>
+                        <li><a href="shortcodes-text.html">Text &amp; Images</a></li>
+                        <li><a href="shortcodes-buttons.html">Buttons &amp; Lists</a></li> 
+                        <li><a href="shortcodes-charts.html">Charts</a></li>  
+                        <li><a href="shortcodes-columns.html">Columns</a>
+                        	<ul>
+								<li><a href="shortcodes-full-cols2.html">Wide Content</a></li>
+								<li><a href="shortcodes-full-cols3.html">Two Sidebars</a></li>
+                        	</ul>
+						</li>  
+                        <li><a href="shortcodes-lightbox.html">Lightbox</a></li>
+						<li><a href="shortcodes-maps.html"><span>Maps</span></a></li>
+                        <li><a href="shortcodes-media.html">Media</a></li>
+                        <li><a href="shortcodes-tables.html">Tables</a></li>
+                        <li><a href="shortcodes-tabs.html">Tabs and Toggles</a></li>
+                        <li><a href="shortcodes-typography.html">Typography</a></li>
+                        <li><a href="shortcodes-widgets.html">Widgets</a></li>
+                    </ul>
+			</div> 
+                
+                
+                <div id="text-3" class="widget-container widget_text">
+                    <h3 class="widget-title">Text Widget Title</h3>
+                    <div class="textwidget">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s... </div>
+				</div>	
+                
+                
+                <!-- newsletter widget -->
+                         <div class="widget-container newsletterBox">
+                            <div class="inner">
+                                <h3>Newsletter:</h3>
+                                <form method="get" id="subscribe" action="#">
+                                    <input type="text" value="ENTER your email address" onFocus="if (this.value == 'ENTER your email address') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'ENTER your email address';}" name="email" class="inputField" />
+                                    <input type="submit" value="Send" class="btn-arrow" />
+                                    <div class="newsletter_text"><a href="#" class="link-news-rss">You can also subscribe to <span>our RSS</span></a></div>
+                                </form>     
+                            </div>
+                        </div>
+				<!--/ newsletter widget -->      
+            
+               
+    </div>
+    <!--/ sidebar 1 -->
+
+	<div class="clear"></div>
+</div>
+<!--/ middle -->
+
+</body>
+</html>
